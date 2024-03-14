@@ -69,3 +69,19 @@ select {
     text-align: center;
 }
 
+.hide {
+    display: none;
+}
+
+.output span{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.surplus {
+    color: var(--light-pink);
+}
+
+.deficit {
+    color: var(--light-green);
+}
