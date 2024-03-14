@@ -55,3 +55,17 @@ select {
     color: car(--dark-blue);
 }
 
+fieldset,
+label,
+button,
+input,
+select {
+    margin: 10px;
+}
+
+.output {
+    border: 2px solid var(--light-grey);
+    padding: 10px;
+    text-align: center;
+}
+
