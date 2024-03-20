@@ -34,7 +34,15 @@ function getCaloriesFromInputs(list) {
     for (const item of list) {
         const curVal = cleanInputString(item.value);
         let invalidInputMatch = isValidInput(curVal);
+
+        if (invalidInputMatch) {
+            alert(`Invalid Input: ${invalidInputMatch[0]}`);
+            isError = true;
+            return null;
+        }
+        calories += Number(currVal);
     }
+    return calories;
 }
 
 addEntryButton.addEventListener('click', addEntry);
