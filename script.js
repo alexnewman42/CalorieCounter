@@ -61,6 +61,16 @@ function calculateCalories(e) {
     const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
     const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
     const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
+
+    if(isError) {
+        return;
+    }
+
+    const consumedCalories = breakfastCalories+lunchCalories+dinnerCalories+snacksCalories;
+    const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
+    const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';
+
+    output.innHTML = `<span class"${surplusOrDeficit.toLowerCase()}">${remainingCalories} Calorie ${surplusOrDeficit}</span>`;
 }
 
 addEntryButton.addEventListener('click', addEntry);
