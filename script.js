@@ -80,7 +80,13 @@ function calculateCalories(e) {
 }
 
 function clearForm() {
-    const inputContainers = document.querySelectorAll(".input-containers");
+    const inputContainers = Array.from(document.querySelectorAll(".input-containers"));
+    for (let container of inputContainers) {
+        container.innerHTML= "";
+    }
+    budgetNumberInput.value = '';
+    output.innerText = '';
+    output.classList.add('hide');
 }
 
 addEntryButton.addEventListener('click', addEntry);
