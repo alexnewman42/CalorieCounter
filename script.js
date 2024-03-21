@@ -79,5 +79,9 @@ function calculateCalories(e) {
     output.classList.remove('hide');
 }
 
+function clearForm() {
+    const inputContainers = document.querySelectorAll(".input-containers");
+}
+
 addEntryButton.addEventListener('click', addEntry);
 calorieCounter.addEventListener('submit', calculateCalories);
